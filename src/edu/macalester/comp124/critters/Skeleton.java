@@ -46,4 +46,6 @@ public class Skeleton extends Critter {
     private static final Color
             strokeColor = new Color(255, 248, 220),
             fillColor   = new Color(205, 175, 149);
+
+
 }
