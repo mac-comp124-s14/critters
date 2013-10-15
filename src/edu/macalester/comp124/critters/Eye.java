@@ -12,22 +12,22 @@ public class Eye {
     private final GObject pupil;
     private final GPoint pupilRestPosition;
     private final double radius;
-    
+
     /**
      * Creates a white eye with a black pupil, a white ocular highlight, and a colored iris.
-     * @param x             Eye position
-     * @param y             Eye position
      * @param r             Eye radius
      * @param pupilSize     Proportion of the pupil radius to the eye radius
      * @param highlightSize Proportion of the highlight radius to the eye radius
      * @param iris          Color of the iris
      * @return
      */
-    public static Eye createStandardEye(double x, double y, double r, double pupilSize, double highlightSize, Color iris) {
+    public Eye(double r, double pupilSize, double highlightSize, Color iris) {
+        // Crete the iris
         GOval white = new GOval(-r, -r, r * 2, r * 2);
         white.setFilled(true);
         white.setFillColor(Color.WHITE);
-        
+
+        // Create the pupil.
         GCompound pupil = new GCompound();
         
         double pupilR = r * pupilSize;
@@ -36,7 +36,8 @@ public class Eye {
         pupilMain.setFillColor(Color.BLACK);
         pupilMain.setColor(iris);
         pupil.add(pupilMain);
-        
+
+        // Create the eye "highlight"
         double highlightR = r * highlightSize;
         GOval highlight = new GOval(0, -highlightR * 2, highlightR * 2, highlightR * 2);
         highlight.setColor(new Color(0, 0, 0, 0));
@@ -47,9 +48,11 @@ public class Eye {
         GCompound group = new GCompound();
         group.add(white);
         group.add(pupil);
-        group.setLocation(x, y);
-        
-        return new Eye(group, pupil, r - pupilR - 2);
+
+        this.graphics = group;
+        this.pupil = pupil;
+        pupilRestPosition = pupil.getLocation();
+        this.radius = r - pupilR - 2;
     }
     
     /**

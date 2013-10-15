@@ -6,6 +6,10 @@ import acm.graphics.GPoint;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The base class for all critters.
+ * Actual critters must implement buildGraphics and call addLeg and addEye.
+ */
 public abstract class Critter {
     private final GCompound graphics;
     private double speed;
@@ -20,10 +24,16 @@ public abstract class Critter {
         buildGraphics();
     }
 
+    /**
+     * @return the underlying graphics component.
+     */
     public GCompound getGraphics() {
          return graphics;
     }
 
+    /**
+     * Concrete classes must override this and use it to draw the shape.
+     */
     protected abstract void buildGraphics();
 
     public double getSize() {
@@ -65,15 +75,23 @@ public abstract class Critter {
         for(Leg leg : legs)
             leg.bodyMovedBy(dx * dt, dy * dt);
     }
-    
+
+    /**
+     * Adds a leg to the critter.
+     * @param leg
+     */
     protected void addLeg(Leg leg) {
         getGraphics().add(leg.getGraphics());
         legs.add(leg);
         leg.setAnchored(legs.size() % 2 == 0);
     }
 
-    protected void addEye(Eye eye) {
-        getGraphics().add(eye.getGraphics());
+    /**
+     * Adds an eye to the critter.
+     * @param eye
+     */
+    protected void addEye(Eye eye, int x, int y) {
+        getGraphics().add(eye.getGraphics(), x, y);
         eyes.add(eye);
     }
 }

@@ -20,9 +20,11 @@ public class RoundBug extends Critter {
         body.setFilled(true);
         body.setFillColor(new Color(158, 103, 12));
         getGraphics().add(body);
-        
-        addEye(Eye.createStandardEye(-18, 10, 10, 0.46, 0.18, Color.GREEN));
-        addEye(Eye.createStandardEye( 18, 10, 10, 0.46, 0.18, Color.GREEN));
+
+        Eye leftEye = new Eye(10, 0.46, 0.18, Color.GREEN);
+        Eye rightEye = new Eye(10, 0.46, 0.18, Color.GREEN);
+        addEye(leftEye, -18, 10);
+        addEye(rightEye, 18, 10);
     }
 
     private void createLeg(double x0, double y0, double x1, double y1) {

@@ -31,9 +31,11 @@ public class BoxBot extends Critter {
         head.setFilled(true);
         head.setFillColor(fillColor);
         getGraphics().add(head);
-        
-        addEye(Eye.createStandardEye(-10, -46, 6, 0.26, 0.18, Color.BLUE));
-        addEye(Eye.createStandardEye( 10, -46, 6, 0.26, 0.18, Color.BLUE));
+
+        Eye leftEye = new Eye(6, 0.26, 0.18, Color.BLUE);
+        Eye rightEye = new Eye(6, 0.26, 0.18, Color.BLUE);
+        addEye(leftEye, -10, -46);
+        addEye(rightEye, 10, -46);
     }
 
     private static final Color
