@@ -7,6 +7,9 @@ import acm.graphics.GPoint;
 
 import java.awt.*;
 
+/**
+ * @author Paul Cantrell
+ */
 public class Eye {
     private final GObject graphics;
     private final GObject pupil;

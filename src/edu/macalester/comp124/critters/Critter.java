@@ -9,6 +9,8 @@ import java.util.List;
 /**
  * The base class for all critters.
  * Actual critters must implement buildGraphics and call addLeg and addEye.
+ *
+ * @author Paul Cantrell
  */
 public abstract class Critter {
     private final GCompound graphics;

@@ -3,6 +3,9 @@ package edu.macalester.comp124.critters;
 import acm.graphics.GObject;
 import acm.graphics.GPoint;
 
+/**
+ * @author Paul Cantrell
+ */
 public class Leg {
     private final GObject graphics;
     private final GPoint restPosition;

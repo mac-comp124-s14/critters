@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * @author Paul Cantrell
+ */
 public class CritterProgram extends GraphicsProgram {
     
     private static final double TARGET_FPS = 30, MIN_EFFECTIVE_FPS = 5;

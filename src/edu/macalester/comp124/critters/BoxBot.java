@@ -4,6 +4,9 @@ import acm.graphics.GRect;
 
 import java.awt.*;
 
+/**
+ * @author Paul Cantrell
+ */
 public class BoxBot extends Critter {
     
     @Override

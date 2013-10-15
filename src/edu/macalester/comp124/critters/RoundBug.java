@@ -5,6 +5,9 @@ import acm.graphics.GPolygon;
 
 import java.awt.*;
 
+/**
+ * @author Paul Cantrell
+ */
 public class RoundBug extends Critter {
     
     @Override
