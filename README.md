@@ -1,7 +1,7 @@
 Comp 124: Critters Lab
 ====
 
-**Acknowledgement:** Paul Cantrell developed this lab.
+**Acknowledgement:** Paul Cantrell developed this lab, Shilad tweaked the Eye code.
 
 Today's lab is a bit of silly fun in the name of practicing graphics programming.
 
