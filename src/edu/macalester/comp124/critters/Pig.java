@@ -79,6 +79,7 @@ public class Pig extends Critter {
         getGraphics().add(nostril2);
     }
 
+
     private static final Color
             strokeColor = new Color(40, 40, 60),
             fillColor   = new Color(232, 120, 129);
