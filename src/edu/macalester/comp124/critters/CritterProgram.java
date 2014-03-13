@@ -41,12 +41,12 @@ public class CritterProgram extends GraphicsProgram {
 
     private void addNewCritter() {
         Critter critter = createRandomCritter();
-        
+
         GObject g = critter.getGraphics();
         g.setLocation(randLocationFor(critter.getGraphics()));
         chooseNewGoal(critter);
         critter.setSpeed(rand.nextDouble() * 20 + 10);
-        
+
         add(critter.getGraphics());
         critters.add(critter);
     }
