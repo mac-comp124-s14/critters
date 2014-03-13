@@ -30,7 +30,7 @@ Go! Space Hunter - Drake Redcrest.
 
         GImage DrakeRedCrest = null;
         try {
-            DrakeRedCrest = new GImage(ImageIO.read(getClass().getResource("/Space_Hunter_Drake_RedCrest.png")));
+            DrakeRedCrest = new GImage(ImageIO.read(getClass().getResource("/Space_Hunter_Drake_Redcrest.png")));
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
