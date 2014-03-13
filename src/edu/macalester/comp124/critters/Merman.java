@@ -25,7 +25,7 @@ public class Merman extends Critter {
 
         GImage leftArm = null;
         try {
-            leftArm = new GImage(ImageIO.read(getClass().getResource("/mermaid_arm.png")),30,-30);
+            leftArm = new GImage(ImageIO.read(getClass().getResource("/Mermaid_arm.png")),30,-30);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -34,7 +34,7 @@ public class Merman extends Critter {
 
         GImage rightArm = null;
         try {
-            rightArm = new GImage(ImageIO.read(getClass().getResource("/mermaid_arm.png")),60,-30);
+            rightArm = new GImage(ImageIO.read(getClass().getResource("/Mermaid_arm.png")),60,-30);
         } catch (IOException e) {
             e.printStackTrace();
         }
