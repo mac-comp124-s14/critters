@@ -77,7 +77,6 @@ public class Pig extends Critter {
         nostril2.setFilled(true);
         nostril2.setFillColor(strokeColor);
         getGraphics().add(nostril2);
-
     }
 
     private static final Color
